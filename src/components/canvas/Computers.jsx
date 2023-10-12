@@ -31,6 +31,22 @@ const Computers = () => {
 }
 
 const ComputersCanvas = () => {
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (e) => {
+      setIsMobile(e.matches);
+    }
+
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+  }, [])
+
   return (
     <Canvas
       frameloop="demand"
