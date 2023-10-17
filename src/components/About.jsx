@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { styles } from '../style';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
+import { SectionWrapper } from '../hoc/index';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -23,7 +24,6 @@ const ServiceCard = ({ index, title, icon }) => {
         >
           <img src={icon} alt={title} className='w-16 h-16 object-contain'/>
           <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
-          {/* 1:16:29 */}
         </div>
       </motion.div>
     </Tilt>
@@ -64,4 +64,4 @@ const About = () => {
   )
 }
 
-export default About
+export default SectionWrapper(About, "about")
