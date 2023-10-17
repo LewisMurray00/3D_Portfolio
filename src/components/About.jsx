@@ -6,7 +6,7 @@ import { styles } from '../style';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 
-const ServiceCard = ( index, title, icon ) => {
+const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
@@ -21,7 +21,9 @@ const ServiceCard = ( index, title, icon ) => {
           }}
           className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
         >
-          <img src={icon} alt={title} className='w-16 h-16'/>
+          <img src={icon} alt={title} className='w-16 h-16 object-contain'/>
+          <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+          {/* 1:16:29 */}
         </div>
       </motion.div>
     </Tilt>
@@ -55,7 +57,7 @@ const About = () => {
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...services} />
+          <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
     </>
