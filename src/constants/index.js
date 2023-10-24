@@ -23,6 +23,8 @@ import {
     jobit,
     tripguide,
     threejs,
+    SKA,
+    TBB,
   } from "../assets";
   
   export const navLinks = [
@@ -200,7 +202,7 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
+      image: TBB,
       source_code_link: "https://tblakebeauty.co.uk",
     },
     {
@@ -221,7 +223,7 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
+      image: SKA,
       source_code_link: "https://studleykickboxingacademy.co.uk",
     },
     // {
