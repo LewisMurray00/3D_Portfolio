@@ -188,15 +188,15 @@ import {
         "Web-based application built for a client that needed a website as a way to highlight their company and things that they offer.",
       tags: [
         {
-          name: "react",
+          name: "Aesthetics",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "Wordpress",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "Website",
           color: "pink-text-gradient",
         },
       ],
@@ -209,15 +209,15 @@ import {
         "Web site for a client regarding a kickboxing academy he was setting up. He needed something simple to use with a enquiry section linking to his email to encourage customers to sign up.",
       tags: [
         {
-          name: "react",
+          name: "Kickboxing",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "Wordpress",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "Website",
           color: "pink-text-gradient",
         },
       ],
