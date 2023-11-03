@@ -7,10 +7,6 @@ import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
-//template_2xlwj83
-//service_fkos86t
-//NkEHkMyuThc0ZXvrh
-
 const Contact = () => {
 
   const formRef = useRef();
@@ -30,7 +26,36 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
 
+    emailJS.send(
+      'service_fkos86t', 
+      'template_2xlwj83',
+      {
+        from_name: form.name,
+        to_name: 'Lewis',
+        from_email: form.email,
+        to_email: 'lewisdmurray00@gmail.com',
+        message: form.message,
+      },
+      'NkEHkMyuThc0ZXvrh'
+      )
+      .then(() => {
+        setLoading(false);
+        alert('Thank you, i will get back to you as soon as i can');
+        
+        setForm({
+          name:"",
+          email:"",
+          message:"",
+        })
+      }, (error) => {
+        setLoading(false)
+
+        console.log(error);
+        alert("Oops... Something went wrong")
+      })
   };
 
   return (
